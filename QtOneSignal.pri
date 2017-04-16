@@ -1,5 +1,3 @@
-QT += core
-
 INCLUDEPATH += $$PWD/src/
 
 SOURCES += $$PWD/src/onesignal.cpp
@@ -8,7 +6,10 @@ HEADERS += $$PWD/src/onesignal.h
 
 
 winrt{
-warning ("WINRT")
+    warning ("WINRT")
+    INCLUDEPATH += $$PWD/src/WinRT/
+    SOURCES += $$PWD/src/WinRT/onesignal_private.cpp
+    HEADERS += $$PWD/src/WinRT/onesignal_private.h
 }else: android{
     warning ("Android")
     QT += androidextras
@@ -22,9 +23,8 @@ warning ("WINRT")
 
     INSTALLS += QONESIGNAL_JAVASRC
 }else{
-INCLUDEPATH += $$PWD/src/dummy/
+    INCLUDEPATH += $$PWD/src/dummy/
     SOURCES += $$PWD/src/dummy/onesignal_private.cpp
     HEADERS += $$PWD/src/dummy/onesignal_private.h
 }
 
-warning($$INCLUDEPATH)

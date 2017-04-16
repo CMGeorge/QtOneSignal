@@ -1,5 +1,5 @@
 QT += qml quick
-TARGET += QtOneSignal
+#TARGET += QtOneSignal
 # The application version
 VERSION = 1.0.0.0
 DEFINES += APP_VERSION=\\\"$$VERSION\\\"

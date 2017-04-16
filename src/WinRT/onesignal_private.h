@@ -1,5 +1,5 @@
-#ifndef ONESIGNAL_H
-#define ONESIGNAL_H
+#ifndef ONESIGNAL_PRIVATE_H
+#define ONESIGNAL_PRIVATE_H
 
 #include <QObject>
 #include <QVariantMap>
@@ -49,4 +49,4 @@ private slots:
 	
 };
 
-#endif // ONESIGNAL_H
+#endif // ONESIGNAL_PRIVATE_H
