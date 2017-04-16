@@ -21,6 +21,10 @@ warning ("WINRT")
     QONESIGNAL_JAVASRC.files += $$files($$PWD/src/android/src/com/onesignal/*)
 
     INSTALLS += QONESIGNAL_JAVASRC
+}else{
+INCLUDEPATH += $$PWD/src/dummy/
+    SOURCES += $$PWD/src/dummy/onesignal_private.cpp
+    HEADERS += $$PWD/src/dummy/onesignal_private.h
 }
 
 warning($$INCLUDEPATH)
