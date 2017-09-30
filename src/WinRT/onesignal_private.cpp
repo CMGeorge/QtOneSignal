@@ -60,6 +60,7 @@ void OneSignal_private::Init(QString appId,QVariantMap startupParams){
 }
 void OneSignal_private::getPushNotification(){
     ComPtr<IPushNotificationChannelManagerStatics> channelManager;
+
     HRESULT hr = GetActivationFactory(HStringReference(L"Windows.Networking.PushNotifications.PushNotificationChannelManager").Get(), &channelManager);
     IAsyncOperation<PushNotificationChannel*>* asyncOp;
     hr = channelManager->CreatePushNotificationChannelForApplicationAsync(&asyncOp);
